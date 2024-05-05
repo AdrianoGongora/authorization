@@ -1,0 +1,15 @@
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/bin/Debug/net8.0/UserManager.Application.deps.json
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/bin/Debug/net8.0/UserManager.Application.dll
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/bin/Debug/net8.0/UserManager.Application.pdb
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/bin/Debug/net8.0/UserManager.Domain.dll
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/bin/Debug/net8.0/UserManager.Domain.pdb
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.csproj.AssemblyReference.cache
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.AssemblyInfoInputs.cache
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.AssemblyInfo.cs
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.csproj.CoreCompileInputs.cache
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserMana.D815DCD9.Up2Date
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.dll
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/refint/UserManager.Application.dll
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.pdb
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/ref/UserManager.Application.dll

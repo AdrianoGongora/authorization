@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "UserManager.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UserManager.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserManager.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UserManager.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UserManager.Domain/UserManager.Domain.csproj",
+      "msbuildProject": "../UserManager.Domain/UserManager.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "UserManager.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/adriano-dev/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/UserManager.Application.csproj",
+      "projectName": "UserManager.Application",
+      "projectPath": "/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/UserManager.Application.csproj",
+      "packagesPath": "/home/adriano-dev/.nuget/packages/",
+      "outputPath": "/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/adriano-dev/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/home/adriano-dev/RiderProjects/UserManager/UserManager.Domain/UserManager.Domain.csproj": {
+              "projectPath": "/home/adriano-dev/RiderProjects/UserManager/UserManager.Domain/UserManager.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/home/adriano-dev/.dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

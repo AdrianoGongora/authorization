@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "UserManager.Application/1.0.0": {
+        "dependencies": {
+          "UserManager.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UserManager.Application.dll": {}
+        }
+      },
+      "UserManager.Domain/1.0.0": {
+        "runtime": {
+          "UserManager.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UserManager.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UserManager.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
