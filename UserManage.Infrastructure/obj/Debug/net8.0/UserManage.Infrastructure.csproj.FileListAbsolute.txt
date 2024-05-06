@@ -15,3 +15,5 @@
 /home/adriano-dev/RiderProjects/UserManager/UserManage.Infrastructure/obj/Debug/net8.0/ref/UserManage.Infrastructure.dll
 /home/adriano-dev/RiderProjects/UserManager/UserManage.Infrastructure/bin/Debug/net8.0/UserManager.Application.dll
 /home/adriano-dev/RiderProjects/UserManager/UserManage.Infrastructure/bin/Debug/net8.0/UserManager.Application.pdb
+/home/adriano-dev/RiderProjects/UserManager/UserManage.Infrastructure/obj/Debug/net8.0/UserManage.Infrastructure.sourcelink.json
+/home/adriano-dev/RiderProjects/UserManager/UserManage.Infrastructure/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll

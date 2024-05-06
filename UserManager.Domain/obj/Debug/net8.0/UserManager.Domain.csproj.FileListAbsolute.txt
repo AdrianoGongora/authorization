@@ -9,3 +9,4 @@
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Domain/obj/Debug/net8.0/refint/UserManager.Domain.dll
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Domain/obj/Debug/net8.0/UserManager.Domain.pdb
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Domain/obj/Debug/net8.0/ref/UserManager.Domain.dll
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Domain/obj/Debug/net8.0/UserManager.Domain.sourcelink.json

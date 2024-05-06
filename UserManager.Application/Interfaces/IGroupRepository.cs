@@ -1,6 +1,6 @@
 namespace UserManager.Application.Interfaces;
 
-public interface IUnitoOfWork
+public interface IGroupRepository
 {
     
 }

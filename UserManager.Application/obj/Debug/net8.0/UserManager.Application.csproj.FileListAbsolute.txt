@@ -13,3 +13,4 @@
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/refint/UserManager.Application.dll
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.pdb
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/ref/UserManager.Application.dll
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Application/obj/Debug/net8.0/UserManager.Application.sourcelink.json

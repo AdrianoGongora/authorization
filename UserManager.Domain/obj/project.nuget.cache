@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "C7jPFogGpeLrGhqxbyXMmt5ZRlHdAx9nsp08qxXBW2MOBAGG84+bIk1yuFSoQolQtVC6Tpa4UFJjxFUZz/66ag==",
+  "dgSpecHash": "c3kFoTn7AWbCrkwNZIJ9gtmwRVUEw8Fa0swA3OttLs6GRX8H6Y2O0k7WbOMrK/6v1mZKIQo9M8luCrq2+xkWrw==",
   "success": true,
   "projectFilePath": "/home/adriano-dev/RiderProjects/UserManager/UserManager.Domain/UserManager.Domain.csproj",
   "expectedPackageFiles": [],
