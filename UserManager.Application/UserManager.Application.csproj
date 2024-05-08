@@ -11,6 +11,11 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Dtos\Group\" />
+      <Folder Include="UseCases\Permission\Command\" />
+      <Folder Include="UseCases\Permission\Queries\" />
+      <Folder Include="UseCases\Role\Command\" />
+      <Folder Include="UseCases\Role\Queries\" />
       <Folder Include="UseCases\Users\Queries\" />
     </ItemGroup>
 

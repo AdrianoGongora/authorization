@@ -6,6 +6,7 @@ using UserManage.Infrastructure.Persistence.Context;
 using UserManage.Infrastructure.Services;
 using UserManager.Application.Commons.Interfaces;
 using UserManager.Application.Interfaces;
+using UserManager.Application.Interfaces.Persistence;
 
 namespace UserManage.Infrastructure;
 

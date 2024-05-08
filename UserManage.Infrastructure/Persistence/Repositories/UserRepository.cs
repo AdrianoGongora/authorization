@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using UserManage.Infrastructure.Persistence.Context;
 using UserManager.Application.Interfaces;
+using UserManager.Application.Interfaces.Persistence;
 using UserManager.Domain.Entities;
 
 namespace UserManage.Infrastructure.Persistence.Repositories;

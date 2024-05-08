@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "yU9+b+7MbcuSEclxkFs0uzM+JBEg2YwOFiJ3/LJUqevsfUktKRwzEIm0J5DRyjHJy/Bebb7nM5n6PygPSlbFXA==",
+  "dgSpecHash": "U0HX1UM7tv50nJ7iBzh1f9fy3gJYRPV8XY8+dPIjAsivQ7itkHHbLHrSt5i2fRr4zvn2CyTh2c5tZRZbzBBCMA==",
   "success": true,
   "projectFilePath": "/home/adriano-dev/RiderProjects/UserManager/UserManager.Api/UserManager.Api.csproj",
   "expectedPackageFiles": [
     "/home/adriano-dev/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/home/adriano-dev/.nuget/packages/awssdk.core/3.7.303.24/awssdk.core.3.7.303.24.nupkg.sha512",
+    "/home/adriano-dev/.nuget/packages/awssdk.s3/3.7.307.25/awssdk.s3.3.7.307.25.nupkg.sha512",
     "/home/adriano-dev/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/adriano-dev/.nuget/packages/fluentvalidation/11.9.1/fluentvalidation.11.9.1.nupkg.sha512",
     "/home/adriano-dev/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.9.1/fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",

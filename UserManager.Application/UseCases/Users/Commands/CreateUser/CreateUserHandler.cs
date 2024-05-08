@@ -2,6 +2,7 @@ using AutoMapper;
 using MediatR;
 using UserManager.Application.Commons.Bases;
 using UserManager.Application.Interfaces;
+using UserManager.Application.Interfaces.Persistence;
 using BC = BCrypt.Net.BCrypt;
 
 namespace UserManager.Application.UseCases.Users.Commands.CreateUser;

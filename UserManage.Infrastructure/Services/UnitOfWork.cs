@@ -1,6 +1,7 @@
 using UserManage.Infrastructure.Persistence.Context;
 using UserManage.Infrastructure.Persistence.Repositories;
 using UserManager.Application.Interfaces;
+using UserManager.Application.Interfaces.Persistence;
 
 namespace UserManage.Infrastructure.Services;
 

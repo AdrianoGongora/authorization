@@ -125,3 +125,5 @@
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Api/obj/Debug/net8.0/UserManager.Api.sourcelink.json
 /home/adriano-dev/RiderProjects/UserManager/UserManager.Api/bin/Debug/net8.0/System.Linq.Dynamic.Core.dll
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Api/bin/Debug/net8.0/AWSSDK.Core.dll
+/home/adriano-dev/RiderProjects/UserManager/UserManager.Api/bin/Debug/net8.0/AWSSDK.S3.dll
