@@ -3,8 +3,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using UserManage.Infrastructure.Commons.Constants;
 using UserManager.Application.Commons.Interfaces;
-using UserManager.Domain.Entities;
+using UserManager.Application.Dtos.User.Response;
 
 namespace UserManage.Infrastructure.Authentication;
 
@@ -18,23 +19,24 @@ public class JwtTokenGenerator: IJwtTokenGenerator
         _jwtSettings = jwtSettings.Value;
         _dateTimeProvider = dateTimeProvider;
     }
-    public string GenerateToken(User user)
+    public string GenerateToken(UserDetailResponseDto user)
     {
         var signingCredentials = new SigningCredentials(
             new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_jwtSettings.Secret)),
-            SecurityAlgorithms.HmacSha512
+            SecurityAlgorithms.HmacSha256
         );
 
 
-        var claims = new[]
+        var claims = new List<Claim>
         {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
-            new Claim(JwtRegisteredClaimNames.FamilyName, user.RoleUsers.ToString() ?? string.Empty),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new(JwtRegisteredClaimNames.GivenName, user.Name),
+            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
         
+        claims.AddRange(user.PermissionIds.Select(idPermissions => 
+            new Claim(CustomClaims.Permissions, idPermissions.ToString())));
+
         var securityToken = new JwtSecurityToken(
             issuer: _jwtSettings.Issuer,
             audience: _jwtSettings.Audience,

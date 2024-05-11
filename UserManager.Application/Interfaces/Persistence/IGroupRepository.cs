@@ -1,3 +1,4 @@
+using UserManager.Application.Dtos.Group;
 using UserManager.Domain.Entities;
 
 namespace UserManager.Application.Interfaces.Persistence;
@@ -8,4 +9,5 @@ public interface IGroupRepository
     Task CreateWithUserAsync(Group group);
     Task UpdateAsync(Group group, bool updateState);
     Task<long> GroupExistsAsync(string groupName, long idEntidad);
+    Task AddUsersGroupAsync(GroupUsersDto groupUsersDto);
 }

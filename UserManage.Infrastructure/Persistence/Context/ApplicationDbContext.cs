@@ -12,6 +12,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<RolePermission> RolePermissions { get; set; }
     public DbSet<RoleUser> RoleUsers { get; set; }
     public DbSet<Group> Groups { get; set; }
+    public DbSet<GroupUsers> GroupUsers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

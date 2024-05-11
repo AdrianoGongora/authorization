@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using UserManager.Application.UseCases.Users.Commands.CreateUser;
+using UserManager.Application.UseCases.Users.Commands.Login;
 
 namespace UserManager.Controllers;
 
@@ -15,8 +16,15 @@ public class User : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpPost("Create")]
+    [HttpPost]
     public async Task<IActionResult> UserCreate([FromBody] CreateUserCmd command)
+    {
+        var response = await _mediator.Send(command);
+        return Ok(response);
+    }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginCommand command)
     {
         var response = await _mediator.Send(command);
         return Ok(response);

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using UserManage.Infrastructure.Persistence.Context;
-using UserManager.Application.Interfaces;
+using UserManager.Application.Dtos.User;
+using UserManager.Application.Dtos.User.Response;
 using UserManager.Application.Interfaces.Persistence;
 using UserManager.Domain.Entities;
 
@@ -28,14 +29,55 @@ public class UserRepository(ApplicationDbContext context) : IUserRepository
         throw new NotImplementedException();
     }
 
-    public async Task<User> UserByEmailAsync(string email)
+    public async Task<UserDetailResponseDto> UserByEmailAsync(string email)
+    {
+        var userDetails = await _context.Users
+            .AsNoTracking()
+            .Where(u => u.Email.Equals(email) && u.State == "1" && u.AuditDeleteUser == null && u.AuditDeleteDate == null)
+            .Select(u => new UserDetailResponseDto()
+            {
+                Name = u.FirstName,
+                LastName = u.LastName,
+                Email = u.Email,
+                Password = u.Password,
+                PermissionIds = u.RoleUsers
+                    .SelectMany(ru => ru.Role.RolePermissions)
+                    .Select(rp => rp.PermissionId)
+                    .Distinct()
+                    .ToList(),
+                GroupNames = u.GroupUsers
+                    .Select(gu => gu.Group.Description)
+                    .ToList()
+            })
+            .FirstOrDefaultAsync();
+
+        return userDetails!;
+    }
+
+    public async Task AddRolesUserAsync(UserRolesDto userRoles)
     {
         var user = await _context.Users
-        .AsNoTracking()
-        .FirstOrDefaultAsync(x => x.Email.Equals(email)
-            && x.State == "1" && x.AuditDeleteUser == null
-            && x.AuditDeleteDate == null);
+            .Include(u => u.RoleUsers)
+            .FirstOrDefaultAsync(u => u.Id == userRoles.UserId);
 
-        return user!;
+        if (user == null)
+        {
+            throw new Exception("User not found");
+        }
+
+        foreach (var roleId in userRoles.RolesId!)
+        {
+            if (user.RoleUsers.Any(ru => ru.RoleId == roleId)) continue;
+            var roleUser = new RoleUser
+            {
+                RoleId = roleId,
+                UserId = userRoles.UserId,
+                AuditCreateUser = 1,
+                AuditCreateDate = DateTime.UtcNow
+            };
+
+            await _context.RoleUsers.AddAsync(roleUser);
+        }
+        await _context.SaveChangesAsync();
     }
 }

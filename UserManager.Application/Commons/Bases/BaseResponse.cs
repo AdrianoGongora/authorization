@@ -1,6 +1,8 @@
+using MediatR;
+
 namespace UserManager.Application.Commons.Bases;
 
-public class BaseResponse<T>
+public class BaseResponse<T> : IRequest
 {
     public bool IsSuccess { get; set; }
     public T? Data { get; set; }
