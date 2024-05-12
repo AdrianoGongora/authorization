@@ -9,6 +9,7 @@ public class Role : BaseEntity
     }
 
     public string Description { get; set; } = null!;
+    public long IdEntidad { get; set; }
     public virtual ICollection<RolePermission> RolePermissions { get; set; }
     public virtual ICollection<RoleUser> RoleUsers { get; set; }
 }

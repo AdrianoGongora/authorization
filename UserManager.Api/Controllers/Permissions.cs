@@ -26,10 +26,9 @@ public class Permissions : ControllerBase
         var response = await _mediator.Send(cmd);
         return Ok(response);
     }
-    
-    [HasPermission(Permission.AddPermissions)]
-    [HttpPost]
-    public async Task<IActionResult>  AddPermissionsRole([FromBody] AddPermissionsRolesHandler cmd)
+
+    [HttpPost("AddRoles")]
+    public async Task<IActionResult> AddPermissionRoles([FromBody] AddPermissionsRolesCommand cmd)
     {
         var response = await _mediator.Send(cmd);
         return Ok(response);

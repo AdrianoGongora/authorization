@@ -10,4 +10,5 @@ public interface IRoleRepository
     Task UpdateAsync(RoleDto role);
     Task<long> RoleExistsAsync(string description, long idEntidad);
     Task AddPermissionsRoleAsync(RolesPermissionsDto userRoles);
+    Task<List<RoleByEntidadDto>> GetPermissionByRoleAsync(long idEntidad);
 }

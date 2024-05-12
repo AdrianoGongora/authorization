@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using UserManage.Infrastructure.Persistence.Context;
+using UserManager.Application.Dtos.Permission;
 using UserManager.Application.Dtos.Role;
 using UserManager.Application.Interfaces.Persistence;
 using UserManager.Domain.Entities;
@@ -76,5 +77,34 @@ public class RoleRepository(ApplicationDbContext context) : IRoleRepository
         }
 
         await _context.SaveChangesAsync();
+    }
+
+    public async Task<List<RoleByEntidadDto>> GetPermissionByRoleAsync(long idEntidad)
+    {
+        var rolesWithPermissions = await _context.Roles
+            .Where(r => r.IdEntidad == idEntidad)
+            .Select(r => new
+            {
+                Role = r,
+                Permissions = r.RolePermissions.Select(rp => rp.Permission).ToList()
+            })
+            .ToListAsync();
+
+        var rolesEntidadDto = new List<RoleByEntidadDto>();
+
+        foreach (var item in rolesWithPermissions)
+        {
+            rolesEntidadDto.Add(new RoleByEntidadDto()
+            {
+                Role = item.Role.Description,
+                Permissions = item.Permissions.Select(p => new PermissionResponseDto
+                {
+                    PermissionId = p.Id,
+                    Description = p.Description
+                }).ToList()
+            });
+        }
+
+        return rolesEntidadDto;
     }
 }

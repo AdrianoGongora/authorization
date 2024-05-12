@@ -179,6 +179,9 @@ namespace UserManage.Infrastructure.Persistence.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
+                    b.Property<long>("IdEntidad")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("State")
                         .HasColumnType("text");
 
